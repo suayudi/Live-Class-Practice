@@ -20,15 +20,23 @@ body {
     gap: 24px;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .card {
     background-color: #f2f1ed;
     border-radius: 4px;
     padding: 15px;
-    width: 320px;
+    min-width: 380px;
+    width: 380px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
@@ -40,14 +48,28 @@ h3 {
 .card-title {
     font-size: 32px;
     font-weight: 400;
-    color: #333;
+    color: #26251e;
     margin-bottom: 8px;
 }
 
 .card-price {
     font-size: 20px;
-    color: #666;
+    color: rgba(38, 37, 30, 0.6);
     margin-bottom: 24px;
+}
+
+.card-price-amount {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgba(38, 37, 30, 0.6);
+}
+
+.card-price-period {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(38, 37, 30, 0.6);
 }
 
 .card-content {
@@ -56,7 +78,7 @@ h3 {
 
 .includes-text {
     font-size: 16px;
-    color: #333;
+    color: rgba(38, 37, 30, 0.6);
     margin-bottom: 16px;
 }
 
@@ -68,16 +90,16 @@ h3 {
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #26251E;
 }
 
 .checkmark {
-    color: #4a4a4a;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
+    color: #26251E;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: regular;
 }
 
 .download-button {
@@ -91,6 +113,7 @@ h3 {
     color: #333;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    margin-top: auto;
 }
 
 .download-button:hover {
